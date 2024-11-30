@@ -1,0 +1,29 @@
+main {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "aside" "repl";
+}
+
+.aside {
+  grid-area: aside;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5% 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+	"tab-bar"
+	"tab-content";
+}
+
+.repl {
+  grid-area: repl;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 15%;
+  gap: 0px 0px;
+  grid-template-areas:
+	"output"
+	"input";
+}
