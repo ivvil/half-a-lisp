@@ -1,8 +1,19 @@
 services:
-  web:
-    build: .
+  nginx:
+    build: ./nginx/
     ports:
       - 8080:80
     volumes:
       - ./app:/var/www/html
-    container_name: web
+    container_name: web-server
+    depends_on:
+      php:
+        condition: service_started
+
+  php:
+    build: ./php/
+    expose:
+      - 9000
+    volumes:
+      - ./app:/var/www/html
+    container_name: php
