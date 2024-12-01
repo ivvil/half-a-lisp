@@ -6,7 +6,12 @@ main {
   grid-template-areas: "aside" "repl";
 }
 
+html, body, main { /* KLUDGE Main needs to be height of the rest of the screem */
+  height: 100%;
+}
+
 .aside {
+  width: 100%;
   grid-area: aside;
   display: grid;
   grid-template-columns: 1fr;
@@ -15,6 +20,14 @@ main {
   grid-template-areas:
 	"tab-bar"
 	"tab-content";
+}
+
+.tab-bar {
+  grid-area: tab-bar;
+}
+
+.tab-content {
+  grid-area: tab-content;
 }
 
 .repl {

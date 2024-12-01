@@ -14,7 +14,7 @@
 	</header>
 	<script src="https://unpkg.com/htmx.org@2.0.3"></script>
 	<main>
-	  <div class="aside" id="tabs" hx-get="/tab1" hx-trigger="load delay:100ms" hx-target="#tabs" hx-swap="innerHTML">
+	  <div class="aside" id="tabs" hx-get="/language" hx-trigger="load delay:100ms" hx-target="#tabs" hx-swap="innerHTML">
 	  </div>
 	  <div class="repl">
 		
